@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Tariku Teshome — Graphic Designer Portfolio">
+<title>Tariku Teshome | Graphic Designer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#111;--muted:#6d6d6d;--paper:#f7f5f0;--card:#fff;--accent:#d83a24;--line:#dedbd4}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:"DM Sans",sans-serif;background:var(--paper);color:var(--ink);line-height:1.6}
+a{color:inherit;text-decoration:none}.wrap{max-width:1180px;margin:auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:20;background:rgba(247,245,240,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:800;letter-spacing:-.03em}.brand span{color:var(--accent)}
+.links{display:flex;gap:26px;font-size:14px;font-weight:600}.links a:hover{color:var(--accent)}
+.hero{min-height:calc(100vh - 72px);display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:center;padding:80px 0}
+.kicker{font-size:13px;text-transform:uppercase;letter-spacing:.18em;font-weight:700;color:var(--accent)}
+h1{font-family:"Playfair Display",serif;font-size:clamp(58px,9vw,112px);line-height:.9;letter-spacing:-.06em;margin:18px 0 28px;max-width:900px}
+.hero p{font-size:20px;max-width:650px;color:#4f4f4f}.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{padding:14px 20px;border-radius:999px;font-weight:700;border:1px solid var(--ink);display:inline-block}.btn.primary{background:var(--ink);color:#fff}.btn:hover{transform:translateY(-2px)}
+.hero-art{position:relative;min-height:470px}.poster{position:absolute;width:270px;height:360px;border-radius:4px;box-shadow:0 28px 70px #0002;display:flex;align-items:flex-end;padding:25px;overflow:hidden}.poster.one{background:#b90e0e;color:#fff;right:40px;top:10px;transform:rotate(5deg)}.poster.two{background:#f2c94c;left:20px;bottom:20px;transform:rotate(-8deg);z-index:2}.poster.three{background:#17202a;color:#fff;right:115px;bottom:0;transform:rotate(1deg);z-index:3}.poster strong{font-size:34px;line-height:.95;letter-spacing:-.05em}.poster small{display:block;margin-top:10px;opacity:.75}
+section{padding:100px 0;border-top:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:38px}.section-head h2{font-family:"Playfair Display",serif;font-size:54px;line-height:1;margin:0;letter-spacing:-.04em}.section-head p{max-width:480px;color:var(--muted);margin:0}
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px}.about-copy{font-size:22px}.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.skill{padding:20px;background:#fff;border:1px solid var(--line);font-weight:700}.skill span{display:block;color:var(--muted);font-weight:400;font-size:13px;margin-top:4px}
+.work{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}.project{background:var(--card);border:1px solid var(--line);min-height:330px;padding:28px;position:relative;overflow:hidden}.project:nth-child(1){grid-column:span 7}.project:nth-child(2){grid-column:span 5}.project:nth-child(3){grid-column:span 5}.project:nth-child(4){grid-column:span 7}.project .visual{position:absolute;inset:0;z-index:0}.project .content{position:relative;z-index:1;height:100%;display:flex;flex-direction:column;justify-content:flex-end}.project h3{font-size:28px;margin:0 0 5px}.project p{margin:0;color:#555}.visual.brand{background:radial-gradient(circle at 70% 25%,#f6b94d 0 18%,transparent 19%),linear-gradient(135deg,#fff 0 48%,#e5e0d6 49%)}.visual.social{background:linear-gradient(135deg,#f03b2f,#ff8b3d);}.visual.music{background:linear-gradient(135deg,#111 0 55%,#d83a24 56%);}.visual.event{background:radial-gradient(circle,#f6c445 0 4%,transparent 5%),#111;background-size:28px 28px}.tag{display:inline-block;width:max-content;background:#fff;padding:6px 10px;font-size:11px;text-transform:uppercase;letter-spacing:.12em;font-weight:800;margin-bottom:12px}
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.step{border-top:3px solid var(--ink);padding-top:18px}.step b{font-size:13px;color:var(--accent)}.step h3{margin:10px 0 5px}.step p{color:var(--muted);font-size:14px}
+.contact{background:var(--ink);color:#fff;border:0}.contact .section-head p{color:#bbb}.contact h2{font-size:clamp(52px,8vw,100px)}.contact-info{display:flex;gap:12px;flex-wrap:wrap}.contact-info a{border:1px solid #444;padding:13px 18px;border-radius:999px}.contact-info a:hover{background:#fff;color:#111}
+footer{padding:28px 0;color:#777;font-size:13px;display:flex;justify-content:space-between}
+@media(max-width:800px){.links{display:none}.hero{grid-template-columns:1fr;padding:60px 0}.hero-art{min-height:400px}.poster{width:220px;height:300px}.about{grid-template-columns:1fr;gap:30px}.work{display:block}.project{margin-bottom:16px}.process{grid-template-columns:1fr 1fr}.section-head{display:block}.section-head p{margin-top:18px}}
+@media(max-width:520px){h1{font-size:58px}.hero-art{min-height:340px}.poster{width:175px;height:245px;padding:18px}.poster strong{font-size:24px}.poster.one{right:0}.poster.three{right:35px}.poster.two{left:0}.process{grid-template-columns:1fr}.skills{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav><div class="wrap nav"><a class="brand" href="#top">TARIKU<span>.</span></a><div class="links"><a href="#about">About</a><a href="#work">Work</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div></div></nav>
+
+<main id="top">
+<div class="wrap">
+<section class="hero" style="border:0">
+<div>
+<div class="kicker">Graphic Designer • Ethiopia</div>
+<h1>Ideas made<br>visual.</h1>
+<p>I create clean, modern and memorable designs that help brands communicate clearly, connect with people and stand out.</p>
+<div class="buttons"><a class="btn primary" href="#work">View selected work</a><a class="btn" href="#contact">Let's work together</a></div>
+</div>
+<div class="hero-art" aria-label="Portfolio design preview">
+<div class="poster one"><div><strong>MAKE<br>IT<br>BOLD.</strong><small>Visual identity / Campaign</small></div></div>
+<div class="poster two"><div><strong>GOOD<br>DESIGN<br>CONNECTS.</strong><small>Social / Digital</small></div></div>
+<div class="poster three"><div><strong>CREATE.<br>REFINE.<br>DELIVER.</strong><small>Graphic design portfolio</small></div></div>
+</div>
+</section>
+
+<section id="about"><div class="section-head"><h2>About me</h2><p>A designer focused on turning ideas and briefs into polished visual communication.</p></div>
+<div class="about"><div class="about-copy">I’m Tariku Teshome, a graphic designer passionate about branding, promotional design and digital content. I combine creative thinking with practical design skills to produce work that is clear, modern and purposeful.</div>
+<div id="skills" class="skills"><div class="skill">Adobe Photoshop<span>Photo editing • compositing • campaign visuals</span></div><div class="skill">Adobe Illustrator<span>Logo design • vector graphics • identity</span></div><div class="skill">Canva<span>Fast social & promotional content</span></div><div class="skill">Figma<span>Layouts • digital design • visual systems</span></div><div class="skill">Typography<span>Hierarchy • readability • type pairing</span></div><div class="skill">Color & Layout<span>Composition • contrast • visual balance</span></div></div></div></section>
+
+<section id="work"><div class="section-head"><h2>Selected work</h2><p>Concept projects are presented as portfolio-ready case-study categories. Replace them with your actual designs before submitting.</p></div>
+<div class="work">
+<article class="project"><div class="visual brand"></div><div class="content"><span class="tag">Brand identity</span><h3>Brand systems that feel memorable.</h3><p>Logo direction, color, typography and applications.</p></div></article>
+<article class="project"><div class="visual social"></div><div class="content"><span class="tag">Social media</span><h3>Content built to stop the scroll.</h3><p>Campaign graphics and promotional posts.</p></div></article>
+<article class="project"><div class="visual music"></div><div class="content"><span class="tag">Music promotion</span><h3>Visuals with energy and emotion.</h3><p>Artist posters, covers and digital promotion.</p></div></article>
+<article class="project"><div class="visual event"></div><div class="content"><span class="tag">Event design</span><h3>Clear communication. Strong presence.</h3><p>Posters, announcements and event campaigns.</p></div></article>
+</div></section>
+
+<section><div class="section-head"><h2>My process</h2><p>Simple, collaborative and focused on the final communication goal.</p></div>
+<div class="process"><div class="step"><b>01</b><h3>Understand</h3><p>Study the brief, audience, message and brand.</p></div><div class="step"><b>02</b><h3>Explore</h3><p>Build concepts through references, sketches and visual directions.</p></div><div class="step"><b>03</b><h3>Design</h3><p>Refine typography, color, composition and details.</p></div><div class="step"><b>04</b><h3>Deliver</h3><p>Prepare clean, professional assets for the right platform.</p></div></div></section>
+
+<section id="contact" class="contact"><div class="section-head"><h2>Have a brief?</h2><p>I'd love to turn your idea into a visual people remember.</p></div>
+<div class="contact-info"><a href="mailto:tareofficial1234@gmail.com">tareofficial1234@gmail.com</a><a href="#top">Back to top ↑</a></div></section>
+</div>
+</main>
+<footer class="wrap"><span>© 2026 Tariku Teshome</span><span>Graphic Design • Branding • Digital</span></footer>
+</body>
+</html>
